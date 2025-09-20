@@ -1,0 +1,115 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create new Posts</title>
+</head>
+<body>
+    <form method = "post" action = "/posts">
+        <input placeholder = "enter username" name = "username"/>
+        <br>
+        <textarea placeholder = "write your posts" name = "content"></textarea>
+        <br>
+        <button>Submit</button>
+    </form>
+    
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create new Posts</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* Gradient background */
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #00b09b, #96c93d);
+    }
+
+    /* Form container */
+    form {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* Input fields */
+    input, textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border 0.2s ease, box-shadow 0.2s ease;
+      outline: none;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #00b09b;
+      box-shadow: 0 0 6px rgba(0,176,155,0.4);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    /* Submit button */
+    button {
+      background: linear-gradient(135deg, #ff512f, #dd2476);
+      color: #fff;
+      font-size: 1rem;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+    }
+
+    /* Title */
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.6rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <form method="post" action="/posts">
+    <h1>Create a New Post</h1>
+    <input placeholder="Enter username" name="username" />
+    <textarea placeholder="Write your post..." name="content"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

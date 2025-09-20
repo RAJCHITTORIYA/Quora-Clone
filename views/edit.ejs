@@ -1,0 +1,120 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+</head>
+<body>
+    <h2>Edit your Post </h2>
+    <p>Post id :  <%= post.id %></p>
+    <p>Post username : <%= post.username %></p>
+
+    <form method = "post" action = "/posts/<%=post.id%>?_method=PATCH">
+        <textarea rows = "10" , cols = "35" name="content"><%= post.content %></textarea>
+        <button>Submit</button>
+    </form>
+    
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Post</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* Gradient background */
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #36d1dc, #5b86e5); /* Blue gradient */
+    }
+
+    /* Container */
+    .container {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    /* Title */
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    /* Post info */
+    p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* Textarea */
+    textarea {
+      width: 100%;
+      min-height: 180px;
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      resize: vertical;
+      transition: border 0.2s ease, box-shadow 0.2s ease;
+      outline: none;
+    }
+
+    textarea:focus {
+      border-color: #5b86e5;
+      box-shadow: 0 0 6px rgba(91,134,229,0.4);
+    }
+
+    /* Button */
+    button {
+      background: linear-gradient(135deg, #36d1dc, #5b86e5);
+      color: white;
+      font-size: 1rem;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Edit Your Post</h2>
+    <p><strong>Post ID:</strong> <%= post.id %></p>
+    <p><strong>Username:</strong> <%= post.username %></p>
+
+    <form method="post" action="/posts/<%=post.id%>?_method=PATCH">
+      <textarea name="content" rows="10" cols="35"><%= post.content %></textarea>
+      <button type="submit">Update Post</button>
+    </form>
+  </div>
+</body>
+</html>
